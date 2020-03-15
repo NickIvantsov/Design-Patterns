@@ -18,6 +18,10 @@ import com.gmail.design_patterns.observer.NewsAgency
 import com.gmail.design_patterns.observer.NewsChannel
 import com.gmail.design_patterns.proxy.CommandExecutor
 import com.gmail.design_patterns.proxy.CommandExecutorProxy
+import com.gmail.design_patterns.strategy.CreditCardStrategy
+import com.gmail.design_patterns.strategy.Item
+import com.gmail.design_patterns.strategy.PaypalStrategy
+import com.gmail.design_patterns.strategy.ShoppingCart
 
 
 class MainActivity : AppCompatActivity() {
@@ -28,7 +32,44 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun helloWorldPressed(view: View) {
-        bridge()
+        strategy()
+    }
+
+    private fun strategy() {
+        /* val easterDiscounter: Discounter = EasterDiscounter()
+
+        val discountedValue: BigDecimal = easterDiscounter
+            .applyDiscount(BigDecimal.valueOf(100))
+
+        val easterDiscounter2: Discounter = object : Discounter {
+            override fun applyDiscount(amount: BigDecimal): BigDecimal {
+                return amount.multiply(BigDecimal.valueOf(0.5))
+            }
+        }
+
+        val easterDiscounter3 = { amount: BigDecimal -> amount.multiply(BigDecimal.valueOf(0.5)) }
+
+        println("discountedValue = $discountedValue")
+        println("easterDiscounter2 = ${easterDiscounter2.applyDiscount(BigDecimal.valueOf(200))}")
+        println("easterDiscounter3 = ${easterDiscounter3(BigDecimal.valueOf(300))}")*/
+
+        val cart = ShoppingCart()
+
+        val item1 = Item("1234", 10)
+        val item2 = Item("5678", 40)
+
+        cart.addItem(item1)
+        cart.addItem(item2)
+
+        //pay by paypal
+
+        //pay by paypal
+        cart.pay(PaypalStrategy("myemail@example.com", "mypwd"))
+
+        //pay by credit card
+
+        //pay by credit card
+        cart.pay(CreditCardStrategy("Pankaj Kumar", "1234567890123456", "786", "12/15"))
     }
 
     private fun bridge() {
