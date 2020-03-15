@@ -3,7 +3,13 @@ package com.gmail.design_patterns
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.gmail.design_patterns.adapter.*
+import com.gmail.design_patterns.adapter.SocketAdapter
+import com.gmail.design_patterns.adapter.SocketClassAdapterImpl
+import com.gmail.design_patterns.adapter.SocketObjectAdapterImpl
+import com.gmail.design_patterns.adapter.Volt
+import com.gmail.design_patterns.bridge.Blue
+import com.gmail.design_patterns.bridge.Shape
+import com.gmail.design_patterns.bridge.Square
 import com.gmail.design_patterns.builder.FoodOrder
 import com.gmail.design_patterns.builder.Person
 import com.gmail.design_patterns.factoryPattern.DoughnutFactory
@@ -22,6 +28,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun helloWorldPressed(view: View) {
+        bridge()
+    }
+
+    private fun bridge() {
+        //a square with red color
+        val square: Shape = Square(Blue())
+        println(square.draw())
+    }
+
+    private fun adapter() {
         /*val bugattiVeyron: Movable = BugattiVeyron()
         val bugattiVeyronAdapter: MovableAdapter = MovableAdapterImpl(bugattiVeyron)
         println("km speed = ${bugattiVeyronAdapter.speed}")*/
