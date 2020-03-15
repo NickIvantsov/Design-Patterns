@@ -9,6 +9,10 @@ import com.gmail.design_patterns.factoryPattern.DoughnutFactory
 import com.gmail.design_patterns.factoryPattern.DoughnutTypes
 import com.gmail.design_patterns.observer.NewsAgency
 import com.gmail.design_patterns.observer.NewsChannel
+import com.gmail.design_patterns.proxy.CommandExecutor
+import com.gmail.design_patterns.proxy.CommandExecutorProxy
+import com.gmail.design_patterns.proxy.ExpensiveObject
+import com.gmail.design_patterns.proxy.ExpensiveObjectProxy
 
 
 class MainActivity : AppCompatActivity() {
@@ -20,6 +24,20 @@ class MainActivity : AppCompatActivity() {
 
     fun helloWorldPressed(view: View) {
 
+    }
+
+    private fun proxy() {
+        /*val `object`: ExpensiveObject = ExpensiveObjectProxy()
+        `object`.process()
+        `object`.process()*/
+
+        val executor: CommandExecutor = CommandExecutorProxy("Pankaj", "wrong_pwd")
+        try {
+            executor.runCommand("ls -ltr")
+            executor.runCommand(" rm -rf abc.pdf")
+        } catch (e: Exception) {
+            println("Exception Message::" + e.message)
+        }
     }
 
     private fun builder() {

@@ -50,3 +50,5 @@ o
 ?app/src/main/java/com/gmail/design_patterns/observer/Subject.kt,0\6\06cf910e035be8a2bccdaaf4c1f7c2c3cdd9f307
 |
 Lapp/src/main/java/com/gmail/design_patterns/factoryPattern/FactoryExample.kt,4\1\414f4bd76c79ed7fe0d2c04f31bf9ff853be03d3
+n
+>app/src/main/java/com/gmail/design_patterns/builder/Builder.kt,0\c\0c42c9634863df40765974f65a2b4d177307305a
