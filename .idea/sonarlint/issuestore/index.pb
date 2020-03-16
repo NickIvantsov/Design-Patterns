@@ -52,3 +52,13 @@ o
 Lapp/src/main/java/com/gmail/design_patterns/factoryPattern/FactoryExample.kt,4\1\414f4bd76c79ed7fe0d2c04f31bf9ff853be03d3
 n
 >app/src/main/java/com/gmail/design_patterns/builder/Builder.kt,0\c\0c42c9634863df40765974f65a2b4d177307305a
+q
+Aapp/src/main/java/com/gmail/design_patterns/proxy/ProxyExample.kt,7\5\75c7eebe6783ecf8f6f868b55cabee0e87ac0309
+|
+Lapp/src/main/java/com/gmail/design_patterns/adapter/AdapterPatternExample.kt,9\8\98068d8cd3bde7e73236457416bf883ca391cb37
+z
+Japp/src/main/java/com/gmail/design_patterns/bridge/BridgePatternExample.kt,2\b\2b6f03785ffecd62f3aa38e06f4bd13e9d07cd72
+w
+Gapp/src/main/java/com/gmail/design_patterns/strategy/StrategyPattern.kt,7\0\70cb46e0ba6cc16a7dd52f86b72c3da7e704ace8
+y
+Iapp/src/main/java/com/gmail/design_patterns/singleton/SingletonExample.kt,d\0\d0631110027371ee6d4f43f2371790b9e2d7de71

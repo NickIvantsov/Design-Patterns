@@ -1,4 +1,10 @@
 
-=kotlin:S125;"Remove this commented out code.(ª°Ü–8ú»¥³Œ.
-Pkotlin:S1144",Remove this unused private "builder" method.(À£Ø–ûÿÿÿÿ8–Ğ±Ù.
-ykotlin:S1186"ZAdd a nested comment explaining why this function is empty or complete the implementation.(“Ï‹°8òŞÁÙ.
+Pkotlin:S1144b",Remove this unused private "adapter" method.(Ê³§ìıÿÿÿÿ8õ·ğé.
+>kotlin:S125¸"Remove this commented out code.(ª°Ü–8ú»¥³Œ.
+Lkotlin:S11447"-Remove this unused private "strategy" method.(ù½µĞ8îÙ›£.
+Bkotlin:S125c"Remove this commented out code.(„·­¹ùÿÿÿÿ8õ·ğé.
+Qkotlin:S1144–",Remove this unused private "builder" method.(À£Ø–ûÿÿÿÿ8–Ğ±Ù.
+Bkotlin:S1258"Remove this commented out code.(‡°š­üÿÿÿÿ8ˆ˜ë.
+>kotlin:S125‰"Remove this commented out code.(¢’’Á8¶Û„é.
+Jkotlin:S1144ˆ"*Remove this unused private "proxy" method.(ğåñ8¶Û„é.
+Jkotlin:S1144\"+Remove this unused private "bridge" method.(ØœÙş8¼¨“ê.

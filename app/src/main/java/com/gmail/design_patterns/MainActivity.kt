@@ -3,25 +3,24 @@ package com.gmail.design_patterns
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.gmail.design_patterns.adapter.SocketAdapter
-import com.gmail.design_patterns.adapter.SocketClassAdapterImpl
-import com.gmail.design_patterns.adapter.SocketObjectAdapterImpl
-import com.gmail.design_patterns.adapter.Volt
+import com.gmail.design_patterns.adapter.*
 import com.gmail.design_patterns.bridge.Blue
 import com.gmail.design_patterns.bridge.Shape
 import com.gmail.design_patterns.bridge.Square
 import com.gmail.design_patterns.builder.FoodOrder
 import com.gmail.design_patterns.builder.Person
+import com.gmail.design_patterns.factoryPattern.AnimalFactory
+import com.gmail.design_patterns.factoryPattern.AnimalType
 import com.gmail.design_patterns.factoryPattern.DoughnutFactory
 import com.gmail.design_patterns.factoryPattern.DoughnutTypes
 import com.gmail.design_patterns.observer.NewsAgency
 import com.gmail.design_patterns.observer.NewsChannel
 import com.gmail.design_patterns.proxy.CommandExecutor
 import com.gmail.design_patterns.proxy.CommandExecutorProxy
-import com.gmail.design_patterns.strategy.CreditCardStrategy
-import com.gmail.design_patterns.strategy.Item
-import com.gmail.design_patterns.strategy.PaypalStrategy
-import com.gmail.design_patterns.strategy.ShoppingCart
+import com.gmail.design_patterns.proxy.ExpensiveObject
+import com.gmail.design_patterns.proxy.ExpensiveObjectProxy
+import com.gmail.design_patterns.strategy.*
+import java.math.BigDecimal
 
 
 class MainActivity : AppCompatActivity() {
@@ -32,11 +31,26 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun helloWorldPressed(view: View) {
-        strategy()
+        val factory = AnimalFactory()
+        val animalTypes =
+            listOf(
+                AnimalType.DOG,
+                AnimalType.DOG,
+                AnimalType.CAT,
+                AnimalType.DOG,
+                AnimalType.CAT,
+                AnimalType.CAT
+            )
+        for (t in animalTypes) {
+            val c = factory.createAnimal(t)
+            println("${c.id}	-	${c.name}")
+        }
+
+
     }
 
     private fun strategy() {
-        /* val easterDiscounter: Discounter = EasterDiscounter()
+         val easterDiscounter: Discounter = EasterDiscounter()
 
         val discountedValue: BigDecimal = easterDiscounter
             .applyDiscount(BigDecimal.valueOf(100))
@@ -51,7 +65,7 @@ class MainActivity : AppCompatActivity() {
 
         println("discountedValue = $discountedValue")
         println("easterDiscounter2 = ${easterDiscounter2.applyDiscount(BigDecimal.valueOf(200))}")
-        println("easterDiscounter3 = ${easterDiscounter3(BigDecimal.valueOf(300))}")*/
+        println("easterDiscounter3 = ${easterDiscounter3(BigDecimal.valueOf(300))}")
 
         val cart = ShoppingCart()
 
@@ -79,9 +93,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun adapter() {
-        /*val bugattiVeyron: Movable = BugattiVeyron()
+        val bugattiVeyron: Movable = BugattiVeyron()
         val bugattiVeyronAdapter: MovableAdapter = MovableAdapterImpl(bugattiVeyron)
-        println("km speed = ${bugattiVeyronAdapter.speed}")*/
+        println("km speed = ${bugattiVeyronAdapter.speed}")
 
         testClassAdapter()
         testObjectAdapter()
@@ -117,9 +131,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun proxy() {
-        /*val `object`: ExpensiveObject = ExpensiveObjectProxy()
+        val `object`: ExpensiveObject = ExpensiveObjectProxy()
         `object`.process()
-        `object`.process()*/
+        `object`.process()
 
         val executor: CommandExecutor = CommandExecutorProxy("Pankaj", "wrong_pwd")
         try {
